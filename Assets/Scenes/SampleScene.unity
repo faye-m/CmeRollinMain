@@ -1274,7 +1274,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: ab1e4c5b9e369a74492a497ddcfb48c9, type: 3}
 --- !u!4 &394404734 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 569100599902715214, guid: ab1e4c5b9e369a74492a497ddcfb48c9, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 394404733}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &444136082
@@ -1374,7 +1374,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: ab1e4c5b9e369a74492a497ddcfb48c9, type: 3}
 --- !u!4 &462884962 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 569100599902715214, guid: ab1e4c5b9e369a74492a497ddcfb48c9, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 462884961}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &475319392
@@ -1534,8 +1534,8 @@ Transform:
   m_LocalPosition: {x: 2.0276375, y: 3.1161237, z: -0.39008474}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8800586030293218950}
   - {fileID: 1553455719}
+  - {fileID: 8800586030293218950}
   m_Father: {fileID: 1680968247}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4227,7 +4227,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: ab1e4c5b9e369a74492a497ddcfb48c9, type: 3}
 --- !u!4 &1429779786 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 569100599902715214, guid: ab1e4c5b9e369a74492a497ddcfb48c9, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1429779785}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1436625814
@@ -4449,7 +4449,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: ab1e4c5b9e369a74492a497ddcfb48c9, type: 3}
 --- !u!4 &1553455719 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 569100599902715214, guid: ab1e4c5b9e369a74492a497ddcfb48c9, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1553455718}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1593080069
@@ -4547,7 +4547,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: ab1e4c5b9e369a74492a497ddcfb48c9, type: 3}
 --- !u!4 &1608078690 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 569100599902715214, guid: ab1e4c5b9e369a74492a497ddcfb48c9, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1608078689}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1620046460
@@ -4771,7 +4771,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: ab1e4c5b9e369a74492a497ddcfb48c9, type: 3}
 --- !u!4 &1643459652 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 569100599902715214, guid: ab1e4c5b9e369a74492a497ddcfb48c9, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1643459651}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1669267051
@@ -5915,7 +5915,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: ab1e4c5b9e369a74492a497ddcfb48c9, type: 3}
 --- !u!4 &2033893585 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 569100599902715214, guid: ab1e4c5b9e369a74492a497ddcfb48c9, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 2033893584}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2046134318
@@ -6511,7 +6511,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 6956283a00ca118438980e250206f88a, type: 3}
 --- !u!4 &5928543560794462460 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 8238926343842801179, guid: 6956283a00ca118438980e250206f88a, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 5928543560794462459}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5985686144420727033
@@ -6700,6 +6700,6 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: ab1e4c5b9e369a74492a497ddcfb48c9, type: 3}
 --- !u!4 &8800586030293218950 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 569100599902715214, guid: ab1e4c5b9e369a74492a497ddcfb48c9, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 8800586030293218949}
   m_PrefabAsset: {fileID: 0}
