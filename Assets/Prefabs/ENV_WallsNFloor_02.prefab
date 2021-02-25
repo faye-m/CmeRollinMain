@@ -28,8 +28,12 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: -0.006191809, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children:
   - {fileID: 276672457185400730}
+=======
+  m_Children: []
+>>>>>>> main
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -82,6 +86,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1001 &314206747304063089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -148,3 +153,5 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ee6344a56f628404e8899aac8bb12774, type: 3}
   m_PrefabInstance: {fileID: 314206747304063089}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> main
