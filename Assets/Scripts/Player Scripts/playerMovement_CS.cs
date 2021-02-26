@@ -6,46 +6,83 @@ using UnityEngine.UI;
 public class playerMovement_CS : MonoBehaviour
 {
     //instantiate variables here
-    private Vector3 fingerPosition;
+    private Vector3 targetPosition;
+    private Vector3 currentPosition;
+    private Vector3 objectPosOnScreen;
     private Vector3 direction;
-    [SerializeField] private float forwardSpeed = 10f;
-    [SerializeField] private float slidingSpeed = 20f;
 
-    private Rigidbody playerRB;  
+    [SerializeField] private float slideSpeed = 10f;
+    [SerializeField] private float rollingSpeed = 5f;
 
-    private void Awake() 
+    private Rigidbody playerRB;
+    private Camera gameCamera;
+
+    private Ray detectionRay;
+    private Plane detectionPlane;
+    private float distance;
+
+    private bool usingKeys = true;
+
+    private void Start() 
     {
         playerRB = GetComponent<Rigidbody>();
+        gameCamera = Camera.main;
     }
 
     private void Update() 
     {
+        DetectInputModes();
+    }
+
+    private void DetectInputModes() 
+    {
+        if (Input.GetAxis("Mouse X") !=0 || Input.GetAxis("Mouse Y") != 0) usingKeys = false;
+
+        if (Input.GetAxis("Horizontal") != 0) 
+        {
+            usingKeys = true;
+            KeyboardControls();
+        }
+
+        else if (Input.touchCount > 0) 
+        {
+            usingKeys = false;
+            MobileControls();
+        }
+
+        else if (Input.mousePresent && !usingKeys) 
+        {
+            MouseControls();
+        }
+    }
+
+    private void MobileControls() 
+    {
 
     }
 
-    //detect player inputs
-    private void DetectPlayerInputCommands() 
+    private void MouseControls() 
     {
-        //detects if there 1 or more fingers on screen and takes the touch position of the very first touch instance
-        if (Input.touchCount > 0) 
-        {
-            Touch singleTouch = Input.GetTouch(0);
-            Debug.Log("Current Touch Position: " + singleTouch.position);
+        objectPosOnScreen = Input.mousePosition;
+        
+        detectionPlane = new Plane(Vector3.up, 0);
+        detectionRay = gameCamera.ScreenPointToRay(objectPosOnScreen);
 
-            //get finger position in relation to screen
-            fingerPosition = Camera.main.ScreenToWorldPoint(singleTouch.position);
-            
-            //set z and y position to 0 since it's irrelevant to the sideward movement
-            fingerPosition.z = 0;
-            fingerPosition.y = 0;
+        if (detectionPlane.Raycast(detectionRay, out distance)) targetPosition = detectionRay.GetPoint(distance);
 
-            direction = (fingerPosition - transform.position);
-        }
+        Debug.Log("Mouse Position: " + targetPosition);
 
-        // keyboard command option for PC/Web
-        else if (Input.GetAxis("Horizontal") != 0) 
-        {
+        currentPosition = transform.position;
+        targetPosition.z = currentPosition.z + rollingSpeed;
 
-        }
+        var delta = Time.deltaTime * Vector3.Distance(currentPosition, targetPosition);
+
+        transform.position = Vector3.MoveTowards(currentPosition, targetPosition, delta);
+        playerRB.velocity = transform.forward * rollingSpeed;
+    }
+
+    private void KeyboardControls() 
+    {
+
     }
 }
