@@ -351,7 +351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7354414194373039650, guid: e6a8db010f07b4645ab90947142a036f, type: 3}
       propertyPath: m_Name
-      value: School
+      value: School_ENV
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6a8db010f07b4645ab90947142a036f, type: 3}

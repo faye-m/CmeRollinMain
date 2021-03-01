@@ -54,10 +54,34 @@ public class playerMovement_CS : MonoBehaviour
         {
             MouseControls();
         }
+
+        else playerRB.velocity = transform.forward * rollingSpeed;
+    }
+
+    private void MovePlayer(Vector3 curPos, Vector3 tarPos) 
+    {
+        var delta = Time.deltaTime * Vector3.Distance(curPos, tarPos);
+
+        transform.position = Vector3.MoveTowards(curPos, tarPos, delta);
+        playerRB.velocity = transform.forward * rollingSpeed;
     }
 
     private void MobileControls() 
     {
+        Touch touch = Input.GetTouch(0);
+        objectPosOnScreen = touch.position;
+
+        detectionPlane = new Plane(Vector3.up, 0);
+        detectionRay = gameCamera.ScreenPointToRay(objectPosOnScreen);
+
+        if (detectionPlane.Raycast(detectionRay, out distance)) targetPosition = detectionRay.GetPoint(distance);
+
+        //Debug.Log("Finger Position: " + targetPosition);
+
+        currentPosition = transform.position;
+        targetPosition.z = currentPosition.z;
+
+        MovePlayer(currentPosition, targetPosition);
 
     }
 
@@ -70,19 +94,21 @@ public class playerMovement_CS : MonoBehaviour
 
         if (detectionPlane.Raycast(detectionRay, out distance)) targetPosition = detectionRay.GetPoint(distance);
 
-        Debug.Log("Mouse Position: " + targetPosition);
+        //Debug.Log("Mouse Position: " + targetPosition);
 
         currentPosition = transform.position;
-        targetPosition.z = currentPosition.z + rollingSpeed;
+        targetPosition.z = currentPosition.z;
 
-        var delta = Time.deltaTime * Vector3.Distance(currentPosition, targetPosition);
+        MovePlayer(currentPosition, targetPosition);
 
-        transform.position = Vector3.MoveTowards(currentPosition, targetPosition, delta);
-        playerRB.velocity = transform.forward * rollingSpeed;
     }
 
     private void KeyboardControls() 
     {
+        float sidewardMovement = Input.GetAxis("Horizontal");
+        if (sidewardMovement > 0 || sidewardMovement < 0) playerRB.velocity = transform.right * sidewardMovement * slideSpeed + transform.forward * rollingSpeed;
+        else playerRB.velocity = Vector3.zero;
 
+        //playerRB.velocity = transform.forward * rollingSpeed;
     }
 }
