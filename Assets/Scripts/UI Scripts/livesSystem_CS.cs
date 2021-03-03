@@ -8,38 +8,36 @@ public class livesSystem_CS : MonoBehaviour
     [SerializeField] private int currentLives;
     private int deathValue = 0;
     private bool playerIsCaught = false;
+    
+    [SerializeField] private string gameUITag = "normalModeUI";
+    private mainGameplayUI_CS mainGameplayUI;
 
     private void Start() 
     {
         SetLives();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        detectConditionsForGameOver();
+        mainGameplayUI = GameObject.FindWithTag(gameUITag).GetComponent<mainGameplayUI_CS>();
     }
 
     private void SetLives() 
     {
         currentLives = maxLives;
         playerIsCaught = false;
+        mainGameplayUI.SetBool(playerIsCaught);
     }
 
     public void subtractLives() 
     {
         currentLives --;
-        Debug.Log("Current Lives: " + currentLives);
-    }
-
-    private void detectConditionsForGameOver() 
-    {
+        
         if (currentLives <= deathValue) 
         {
             currentLives = 0;
             playerIsCaught = true;
             //pause game or go to the win/lose screen
+            mainGameplayUI.SetBool(playerIsCaught);
         }
+
+        Debug.Log("Current Lives: " + currentLives);
     }
 
     public bool PlayerCaught() 
