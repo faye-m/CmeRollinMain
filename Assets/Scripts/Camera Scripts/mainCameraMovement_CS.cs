@@ -8,6 +8,7 @@ public class mainCameraMovement_CS : MonoBehaviour
     [SerializeField] private string playerTag = "Player";
     private Vector3 currentPosition;
     private Vector3 targetPosition;
+    [SerializeField] private float speed = 3f;
 
     // Start is called before the first frame update
     private void Awake() 
@@ -16,9 +17,14 @@ public class mainCameraMovement_CS : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update() 
     {
         CameraMovement();
+    }
+
+    void LateUpdate()
+    {
+        //CameraMovement();
     }
 
     private void CameraMovement() 
@@ -30,6 +36,6 @@ public class mainCameraMovement_CS : MonoBehaviour
 
         var delta = Time.deltaTime * Vector3.Distance(currentPosition, targetPosition);
 
-        transform.position = Vector3.Lerp(currentPosition, targetPosition, delta*3);
+        transform.position = Vector3.Lerp(currentPosition, targetPosition, speed * Time.deltaTime);
     }
 }

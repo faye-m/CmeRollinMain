@@ -22,6 +22,7 @@ public class playerMovement_CS : MonoBehaviour
     private float distance;
 
     private bool usingKeys = true;
+    private bool isOnEdgeOfMap = false;
 
     private void Start() 
     {
@@ -29,41 +30,49 @@ public class playerMovement_CS : MonoBehaviour
         gameCamera = Camera.main;
     }
 
-    private void Update() 
+    private void FixedUpdate() 
     {
         DetectInputModes();
     }
 
     private void DetectInputModes() 
     {
-        if (Input.GetAxis("Mouse X") !=0 || Input.GetAxis("Mouse Y") != 0) usingKeys = false;
+        if (Input.GetButtonDown("Left Click")) usingKeys = false;
 
-        if (Input.GetAxis("Horizontal") != 0) 
+        if (!isOnEdgeOfMap) 
         {
-            usingKeys = true;
-            KeyboardControls();
+                if (Input.GetAxis("Horizontal") != 0) 
+            {
+                usingKeys = true;
+                KeyboardControls();
+            }
+
+            else if (Input.touchCount > 0) 
+            {
+                usingKeys = false;
+                MobileControls();
+            }
+
+            else if (Input.mousePresent && !usingKeys) 
+            {
+                MouseControls();
+            }
+
+            else playerRB.velocity = Vector3.forward * rollingSpeed; //  * Time.deltaTime;
         }
 
-        else if (Input.touchCount > 0) 
-        {
-            usingKeys = false;
-            MobileControls();
-        }
-
-        else if (Input.mousePresent && !usingKeys) 
-        {
-            MouseControls();
-        }
-
-        else playerRB.velocity = transform.forward * rollingSpeed;
+        else playerRB.velocity = Vector3.forward * rollingSpeed;
     }
 
     private void MovePlayer(Vector3 curPos, Vector3 tarPos) 
     {
-        var delta = Time.deltaTime * Vector3.Distance(curPos, tarPos);
+        //var delta = Time.deltaTime * Vector3.Distance(curPos, tarPos);
 
-        transform.position = Vector3.MoveTowards(curPos, tarPos, delta);
-        playerRB.velocity = transform.forward * rollingSpeed;
+        //transform.position = Vector3.MoveTowards(curPos, tarPos, delta);
+        //playerRB.velocity = transform.forward * rollingSpeed;
+
+        direction = ((targetPosition - currentPosition) * slideSpeed + Vector3.forward * rollingSpeed); // * Time.deltaTime;
+        playerRB.velocity = direction;
     }
 
     private void MobileControls() 
@@ -106,9 +115,14 @@ public class playerMovement_CS : MonoBehaviour
     private void KeyboardControls() 
     {
         float sidewardMovement = Input.GetAxis("Horizontal");
-        if (sidewardMovement > 0 || sidewardMovement < 0) playerRB.velocity = transform.right * sidewardMovement * slideSpeed + transform.forward * rollingSpeed;
-        else playerRB.velocity = Vector3.zero;
+
+        direction = (Vector3.right * sidewardMovement * slideSpeed + Vector3.forward * rollingSpeed); //* Time.deltaTime;
+        playerRB.velocity = direction;
+
+        //if (sidewardMovement > 0 || sidewardMovement < 0) playerRB.velocity = transform.right * sidewardMovement * slideSpeed + transform.forward * rollingSpeed;
+        //else playerRB.velocity = Vector3.zero;
 
         //playerRB.velocity = transform.forward * rollingSpeed;
     }
+
 }

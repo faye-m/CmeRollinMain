@@ -8,6 +8,10 @@ TagManager:
   - hallPass
   - goal
   - customItem
+  - levelIsOverUI
+  - playerWinUI
+  - playerLoseUI
+  - pauseUI
   layers:
   - Default
   - TransparentFX

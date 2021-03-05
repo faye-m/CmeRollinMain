@@ -12,11 +12,14 @@ public class detectPlayerCollisions_CS : MonoBehaviour
 
     private livesSystem_CS livesSystem;
     private hallPassSystem_CS hallPassSystem;
+    private playerMovement_CS playerMovement;
+    [SerializeField] private mainGameplayUI_CS mainGameplayUI = null;
 
     private void Awake() 
     {
         livesSystem = GetComponent<livesSystem_CS>();
         hallPassSystem = GetComponent<hallPassSystem_CS>();
+        playerMovement = GetComponent<playerMovement_CS>();
     }
 
     private void OnTriggerEnter (Collider other) 
@@ -27,7 +30,7 @@ public class detectPlayerCollisions_CS : MonoBehaviour
             
             //run related script to handle player lives
             livesSystem.subtractLives();
-            
+
             //play animations involved
         }
 
@@ -37,6 +40,7 @@ public class detectPlayerCollisions_CS : MonoBehaviour
 
             //run related script to handle hall passes obtained
             hallPassSystem.AddHallPass();
+            Destroy(other.gameObject);
 
             //call related UI and Particle Animations here
         }
@@ -44,6 +48,10 @@ public class detectPlayerCollisions_CS : MonoBehaviour
         if (other.tag == finishLineTag) 
         {
             Debug.Log("Player wins the level, CONGRATS!");
+
+            //tells the game that the level is finished
+            mainGameplayUI.SetBool(true);
+            
             //play animations involved
         }
 
@@ -51,6 +59,7 @@ public class detectPlayerCollisions_CS : MonoBehaviour
         {
             // call related UI and Particle Animations here
             Debug.Log("You've obtained a HAT! Got to the customize menu to see how it looks on you.");
+            Destroy(other.gameObject);
         }
     }
 }

@@ -9,13 +9,13 @@ public class livesSystem_CS : MonoBehaviour
     private int deathValue = 0;
     private bool playerIsCaught = false;
     
-    [SerializeField] private string gameUITag = "normalModeUI";
+    [SerializeField] private GameObject mainGameplayUIGO = null;
     private mainGameplayUI_CS mainGameplayUI;
 
     private void Start() 
     {
+        mainGameplayUI = mainGameplayUIGO.GetComponent<mainGameplayUI_CS>();
         SetLives();
-        mainGameplayUI = GameObject.FindWithTag(gameUITag).GetComponent<mainGameplayUI_CS>();
     }
 
     private void SetLives() 
@@ -27,14 +27,14 @@ public class livesSystem_CS : MonoBehaviour
 
     public void subtractLives() 
     {
-        currentLives --;
+        currentLives -= 1;
         
         if (currentLives <= deathValue) 
         {
             currentLives = 0;
             playerIsCaught = true;
-            //pause game or go to the win/lose screen
             mainGameplayUI.SetBool(playerIsCaught);
+            //pause game or go to the win/lose screen
         }
 
         Debug.Log("Current Lives: " + currentLives);
@@ -44,5 +44,11 @@ public class livesSystem_CS : MonoBehaviour
     {
         bool condition = playerIsCaught;
         return condition;
+    }
+
+    public int GetCurrentLives() 
+    {
+        int lives = currentLives;
+        return lives;
     }
 }
