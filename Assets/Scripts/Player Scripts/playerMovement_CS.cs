@@ -11,6 +11,8 @@ public class playerMovement_CS : MonoBehaviour
     private Vector3 objectPosOnScreen;
     private Vector3 direction;
 
+    [SerializeField] private float minX = -2.6f, maxX = 2.6f;
+
     [SerializeField] private float slideSpeed = 10f;
     [SerializeField] private float rollingSpeed = 5f;
 
@@ -37,7 +39,7 @@ public class playerMovement_CS : MonoBehaviour
 
     private void DetectInputModes() 
     {
-        if (Input.GetButtonDown("Left Click")) usingKeys = false;
+        if (Input.GetButtonDown("Left Click") || Input.GetAxis("Mouse X") !=0) usingKeys = false;
 
         if (!isOnEdgeOfMap) 
         {
@@ -71,7 +73,10 @@ public class playerMovement_CS : MonoBehaviour
         //transform.position = Vector3.MoveTowards(curPos, tarPos, delta);
         //playerRB.velocity = transform.forward * rollingSpeed;
 
-        direction = ((targetPosition - currentPosition) * slideSpeed + Vector3.forward * rollingSpeed); // * Time.deltaTime;
+        if (curPos.x >= maxX && tarPos.x >= maxX) tarPos.x = maxX;
+        else if  (curPos.x <= minX && tarPos.x <= minX) tarPos.x = minX;
+
+        direction = ((tarPos - curPos) * slideSpeed + Vector3.forward * rollingSpeed); // * Time.deltaTime;
         playerRB.velocity = direction;
     }
 
@@ -115,6 +120,10 @@ public class playerMovement_CS : MonoBehaviour
     private void KeyboardControls() 
     {
         float sidewardMovement = Input.GetAxis("Horizontal");
+
+        currentPosition = transform.position;
+
+        if ((currentPosition.x >= maxX && sidewardMovement > 0) || (currentPosition.x <= minX && sidewardMovement < 0)) sidewardMovement = 0;
 
         direction = (Vector3.right * sidewardMovement * slideSpeed + Vector3.forward * rollingSpeed); //* Time.deltaTime;
         playerRB.velocity = direction;

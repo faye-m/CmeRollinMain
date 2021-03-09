@@ -105,7 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6268375171757771186}
   m_Layer: 0
-  m_Name: GymEntrance_ENV
+  m_Name: WallDoor_ENV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -2668,7 +2668,6 @@ GameObject:
   - component: {fileID: 787454492}
   - component: {fileID: 787454496}
   - component: {fileID: 787454495}
-  - component: {fileID: 787454497}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2733,6 +2732,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a062c4a45c310044929993df52f0cb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minX: -2.6
+  maxX: 2.6
   slideSpeed: 10
   rollingSpeed: 10
 --- !u!54 &787454494
@@ -2743,7 +2744,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787454489}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -2778,19 +2779,6 @@ MonoBehaviour:
   maxLives: 3
   currentLives: 0
   mainGameplayUIGO: {fileID: 899333241}
---- !u!65 &787454497
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787454489}
-  m_Material: {fileID: 13400000, guid: 0f943cb5831571f4a8b705621fbe02eb, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 0.5, z: 0.5}
-  m_Center: {x: 0, y: 3, z: 0}
 --- !u!1 &822832644
 GameObject:
   m_ObjectHideFlags: 0
