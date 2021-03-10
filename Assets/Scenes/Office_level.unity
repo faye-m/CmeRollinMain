@@ -884,6 +884,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -26.525
       objectReference: {fileID: 0}
+    - target: {fileID: 3827899382014102240, guid: be42f9e88ded56040b6bb7b0a6ec9528, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d6329fc55f4c2b4785d16efdb2ac015, type: 2}
     - target: {fileID: 5267359846954971507, guid: be42f9e88ded56040b6bb7b0a6ec9528, type: 3}
       propertyPath: m_Name
       value: Desk_Prefab (1)
@@ -2407,6 +2411,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3316596179778902999, guid: ffac287ad130c0d4c8365373a5d2fd28, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d6329fc55f4c2b4785d16efdb2ac015, type: 2}
     - target: {fileID: 4510440036469131149, guid: ffac287ad130c0d4c8365373a5d2fd28, type: 3}
       propertyPath: m_Name
       value: WaterCooler_ENV
