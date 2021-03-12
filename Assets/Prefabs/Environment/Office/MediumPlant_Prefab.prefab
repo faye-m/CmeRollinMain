@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6706072907288090398}
   m_Layer: 0
-  m_Name: medium plant
+  m_Name: MediumPlant_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,14 +95,70 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8393026056966041441, guid: dbe6b2034509d5044ac84c6eea0d29eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
+    - target: {fileID: -8137166006870792066, guid: dbe6b2034509d5044ac84c6eea0d29eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
+    - target: {fileID: -7596010897010249291, guid: dbe6b2034509d5044ac84c6eea0d29eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     - target: {fileID: -6445060786358088477, guid: dbe6b2034509d5044ac84c6eea0d29eb, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3d6329fc55f4c2b4785d16efdb2ac015, type: 2}
+    - target: {fileID: -6175725471114031658, guid: dbe6b2034509d5044ac84c6eea0d29eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
+    - target: {fileID: -6003472363134422652, guid: dbe6b2034509d5044ac84c6eea0d29eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
+    - target: {fileID: -5906993208294074987, guid: dbe6b2034509d5044ac84c6eea0d29eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
+    - target: {fileID: 473054701501923635, guid: dbe6b2034509d5044ac84c6eea0d29eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     - target: {fileID: 919132149155446097, guid: dbe6b2034509d5044ac84c6eea0d29eb, type: 3}
       propertyPath: m_Name
       value: OfficeMedPlant_ENV
       objectReference: {fileID: 0}
+    - target: {fileID: 1812991771290175334, guid: dbe6b2034509d5044ac84c6eea0d29eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
+    - target: {fileID: 3265920011771244699, guid: dbe6b2034509d5044ac84c6eea0d29eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
+    - target: {fileID: 4795772696024676474, guid: dbe6b2034509d5044ac84c6eea0d29eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
+    - target: {fileID: 7040182765462201180, guid: dbe6b2034509d5044ac84c6eea0d29eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
+    - target: {fileID: 8407738602062591293, guid: dbe6b2034509d5044ac84c6eea0d29eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
+    - target: {fileID: 8523772855540137367, guid: dbe6b2034509d5044ac84c6eea0d29eb, type: 3}
+      propertyPath: m_Name
+      value: Leaves
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206203462082651379, guid: dbe6b2034509d5044ac84c6eea0d29eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbe6b2034509d5044ac84c6eea0d29eb, type: 3}
 --- !u!4 &1299845284620993587 stripped

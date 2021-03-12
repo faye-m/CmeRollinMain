@@ -95,6 +95,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2375799924942eb47964233702b18a6d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     - target: {fileID: 919132149155446097, guid: 2375799924942eb47964233702b18a6d, type: 3}
       propertyPath: m_Name
       value: OfficePrinter_ENV

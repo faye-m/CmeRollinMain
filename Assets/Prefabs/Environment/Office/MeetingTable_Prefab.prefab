@@ -23,7 +23,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9092346762643618270}
   m_Layer: 0
-  m_Name: Meeting table prefab
+  m_Name: MeetingTable_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,10 +105,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6067185528594298527, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     - target: {fileID: 919132149155446097, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
       propertyPath: m_Name
       value: OfficeDeskChair_ENV (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3566390031902043909, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
+    - target: {fileID: 6682079707895069688, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
 --- !u!4 &1125693067314086737 stripped
@@ -167,6 +179,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9af436e071380bc4289c9e8460c07cdb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     - target: {fileID: 919132149155446097, guid: 9af436e071380bc4289c9e8460c07cdb, type: 3}
       propertyPath: m_Name
       value: OfficeMeetingTable_ENV
@@ -234,10 +250,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6067185528594298527, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     - target: {fileID: 919132149155446097, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
       propertyPath: m_Name
       value: OfficeDeskChair_ENV
       objectReference: {fileID: 0}
+    - target: {fileID: 3566390031902043909, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
+    - target: {fileID: 6682079707895069688, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
 --- !u!4 &3392381802666124962 stripped
@@ -296,10 +324,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6067185528594298527, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     - target: {fileID: 919132149155446097, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
       propertyPath: m_Name
       value: OfficeDeskChair_ENV (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3566390031902043909, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
+    - target: {fileID: 6682079707895069688, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
 --- !u!4 &3285295151149025240 stripped
@@ -358,10 +398,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6067185528594298527, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     - target: {fileID: 919132149155446097, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
       propertyPath: m_Name
       value: OfficeDeskChair_ENV (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 3566390031902043909, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
+    - target: {fileID: 6682079707895069688, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
 --- !u!4 &3043803824223058358 stripped
@@ -420,10 +472,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6067185528594298527, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     - target: {fileID: 919132149155446097, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
       propertyPath: m_Name
       value: OfficeDeskChair_ENV (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3566390031902043909, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
+    - target: {fileID: 6682079707895069688, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
 --- !u!4 &3491136003948264344 stripped
@@ -482,10 +546,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6067185528594298527, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     - target: {fileID: 919132149155446097, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
       propertyPath: m_Name
       value: OfficeDeskChair_ENV (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 3566390031902043909, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
+    - target: {fileID: 6682079707895069688, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
 --- !u!4 &4309674613984344582 stripped
@@ -544,10 +620,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6067185528594298527, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     - target: {fileID: 919132149155446097, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
       propertyPath: m_Name
       value: OfficeDeskChair_ENV (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3566390031902043909, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
+    - target: {fileID: 6682079707895069688, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
 --- !u!4 &5220952562684133972 stripped
@@ -606,10 +694,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6067185528594298527, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     - target: {fileID: 919132149155446097, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
       propertyPath: m_Name
       value: OfficeDeskChair_ENV (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3566390031902043909, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
+    - target: {fileID: 6682079707895069688, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
 --- !u!4 &7053403586627971770 stripped
@@ -668,10 +768,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6067185528594298527, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     - target: {fileID: 919132149155446097, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
       propertyPath: m_Name
       value: OfficeDeskChair_ENV (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3566390031902043909, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
+    - target: {fileID: 6682079707895069688, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
 --- !u!4 &9050226872030011087 stripped
@@ -730,10 +842,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6067185528594298527, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     - target: {fileID: 919132149155446097, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
       propertyPath: m_Name
       value: OfficeDeskChair_ENV (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3566390031902043909, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
+    - target: {fileID: 6682079707895069688, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1928db12fdaf8f54fae77edf367f3ef2, type: 3}
 --- !u!4 &8765443508461289840 stripped

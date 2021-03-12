@@ -51,6 +51,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1264821337135261593}
     m_Modifications:
+    - target: {fileID: -9210538689745757899, guid: 8e9e988aaf038e54b83f116b52ef951d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     - target: {fileID: -8679921383154817045, guid: 8e9e988aaf038e54b83f116b52ef951d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.17
@@ -95,10 +99,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6923525212353638379, guid: 8e9e988aaf038e54b83f116b52ef951d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
+    - target: {fileID: -5539764629200458662, guid: 8e9e988aaf038e54b83f116b52ef951d, type: 3}
+      propertyPath: m_Name
+      value: leaves
+      objectReference: {fileID: 0}
+    - target: {fileID: -4633433225103731678, guid: 8e9e988aaf038e54b83f116b52ef951d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
+    - target: {fileID: -4554962847078199324, guid: 8e9e988aaf038e54b83f116b52ef951d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     - target: {fileID: 919132149155446097, guid: 8e9e988aaf038e54b83f116b52ef951d, type: 3}
       propertyPath: m_Name
       value: OfficeSmlPlant_ENV
       objectReference: {fileID: 0}
+    - target: {fileID: 8145712919030921587, guid: 8e9e988aaf038e54b83f116b52ef951d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b75fcf1e25b6fe7468c1aa44a459026a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e9e988aaf038e54b83f116b52ef951d, type: 3}
 --- !u!4 &1612845897365606704 stripped
