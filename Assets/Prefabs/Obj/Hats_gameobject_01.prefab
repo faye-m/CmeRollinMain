@@ -89,6 +89,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SodaHat_obj_01
       objectReference: {fileID: 0}
+    - target: {fileID: 6379886716640161051, guid: c289c53684b56e24eb6a1e08178a1867, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c289c53684b56e24eb6a1e08178a1867, type: 3}
 --- !u!4 &2298077841604183142 stripped
@@ -213,6 +217,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HelicopterHat_obj_01
       objectReference: {fileID: 0}
+    - target: {fileID: 9019040536776296900, guid: 996ae393a2175f14fbd56d9c5bb49c76, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 996ae393a2175f14fbd56d9c5bb49c76, type: 3}
 --- !u!4 &2298077842238569478 stripped
@@ -230,6 +238,10 @@ PrefabInstance:
     - target: {fileID: 7015505150091200965, guid: d3123dbe6e96db643b15fe1e8e971815, type: 3}
       propertyPath: m_Name
       value: PartyHat_obj_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7015505150091200965, guid: d3123dbe6e96db643b15fe1e8e971815, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7644794874539823999, guid: d3123dbe6e96db643b15fe1e8e971815, type: 3}
       propertyPath: m_LocalPosition.x

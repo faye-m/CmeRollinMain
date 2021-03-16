@@ -9,29 +9,48 @@ public class mainGameplayUI_CS : MonoBehaviour
     [SerializeField] private string playerTag = "Player";
 
     private livesSystem_CS livesSystem;
+    private hallPassSystem_CS hallPassSystem;
     private bool levelIsOver = false;
     private bool gameIsPaused = false;
+
+    [SerializeField] private Transform playerTransform = null, goalTransform = null;
+    [SerializeField] private Slider progressSlider = null;
+    private float distance, totalDist;
 
 
     private void Start() 
     {
         livesSystem = GameObject.FindWithTag(playerTag).GetComponent<livesSystem_CS>();
+        hallPassSystem = GameObject.FindWithTag(playerTag).GetComponent<hallPassSystem_CS>();
+        totalDist = Vector3.Distance(playerTransform.position, goalTransform.position);
+
     }
 
     private void FixedUpdate() 
     {
-
+        DetectDistacetoGoal();
     }
 
     private void LateUpdate() 
     {
         PauseGame();
         DetectLevelOver();
+        DisplayDistancetoGoal();
     }
 
     public void SetBool(bool condition) 
     {
         levelIsOver = condition;
+    }
+
+    private void DetectDistacetoGoal() 
+    {
+        distance = Vector3.Distance(playerTransform.position, goalTransform.position);
+    }
+
+    private void DisplayDistancetoGoal() 
+    {
+        progressSlider.value = (totalDist - distance) / totalDist;
     }
 
     private void DetectLevelOver() 

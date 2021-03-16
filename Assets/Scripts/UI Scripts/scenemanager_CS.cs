@@ -7,8 +7,10 @@ using UnityEngine.UI;
 public class scenemanager_CS : MonoBehaviour
 {
     private string levelName;
+    [SerializeField] private int stageNumber = 0; 
+    [SerializeField] private int levelNumber = 0;
 
-    public void LoadLevel(int stageNumber, int levelNumber) 
+    public void LoadLevel() 
     {
         levelName = "stage" + stageNumber.ToString() + "_level" + levelNumber.ToString();
 
