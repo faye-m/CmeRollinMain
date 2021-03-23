@@ -11,7 +11,7 @@ public class playerMovement_CS : MonoBehaviour
     private Vector3 objectPosOnScreen;
     private Vector3 direction;
 
-    [SerializeField] private float minX = -2.6f, maxX = 2.6f;
+    [SerializeField] private float minX = -10f /*-2.6f*/, maxX = 10f /*2.6f*/;
 
     [SerializeField] private float slideSpeed = 10f;
     [SerializeField] private float rollingSpeed = 5f;
@@ -26,9 +26,12 @@ public class playerMovement_CS : MonoBehaviour
     private bool usingKeys = true;
     private bool isOnEdgeOfMap = false;
 
+    private playerAnimations_CS animations;
+
     private void Start() 
     {
         playerRB = GetComponent<Rigidbody>();
+        animations = GetComponent<playerAnimations_CS>();
         gameCamera = Camera.main;
     }
 
@@ -37,13 +40,21 @@ public class playerMovement_CS : MonoBehaviour
         DetectInputModes();
     }
 
+    private void CallAnimations(float targetPosX, float currentPosX) 
+    {
+         
+        if (targetPosX > currentPosX) animations.TurningRight();
+        else if (targetPosX < currentPosX) animations.TurningLeft();
+        else animations.GoingForward();
+    }
+
     private void DetectInputModes() 
     {
         if (Input.GetButtonDown("Left Click") || Input.GetAxis("Mouse X") !=0) usingKeys = false;
 
         if (!isOnEdgeOfMap) 
         {
-                if (Input.GetAxis("Horizontal") != 0) 
+            if (Input.GetAxis("Horizontal") != 0) 
             {
                 usingKeys = true;
                 KeyboardControls();
@@ -60,10 +71,18 @@ public class playerMovement_CS : MonoBehaviour
                 MouseControls();
             }
 
-            else playerRB.velocity = Vector3.forward * rollingSpeed; //  * Time.deltaTime;
+            else 
+            {
+                playerRB.velocity = Vector3.forward * rollingSpeed; //  * Time.deltaTime;
+                animations.GoingForward();
+            }
         }
 
-        else playerRB.velocity = Vector3.forward * rollingSpeed;
+        else 
+        {
+            playerRB.velocity = Vector3.forward * rollingSpeed;
+            animations.GoingForward();
+        }
     }
 
     private void MovePlayer(Vector3 curPos, Vector3 tarPos) 
@@ -75,6 +94,8 @@ public class playerMovement_CS : MonoBehaviour
 
         if (curPos.x >= maxX && tarPos.x >= maxX) tarPos.x = maxX;
         else if  (curPos.x <= minX && tarPos.x <= minX) tarPos.x = minX;
+
+        CallAnimations(tarPos.x, curPos.x);
 
         direction = ((tarPos - curPos) * slideSpeed + Vector3.forward * rollingSpeed); // * Time.deltaTime;
         playerRB.velocity = direction;
@@ -120,6 +141,8 @@ public class playerMovement_CS : MonoBehaviour
     private void KeyboardControls() 
     {
         float sidewardMovement = Input.GetAxis("Horizontal");
+
+        CallAnimations(sidewardMovement, 0f);
 
         currentPosition = transform.position;
 

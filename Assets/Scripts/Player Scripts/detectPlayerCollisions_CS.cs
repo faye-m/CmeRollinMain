@@ -13,13 +13,19 @@ public class detectPlayerCollisions_CS : MonoBehaviour
     private livesSystem_CS livesSystem;
     private hallPassSystem_CS hallPassSystem;
     private playerMovement_CS playerMovement;
+    private analyticsTracker_CS analyticsTracker;
     [SerializeField] private mainGameplayUI_CS mainGameplayUI = null;
+    [SerializeField] private scenemanager_CS sceneManager = null;
+    private playerAnimations_CS animations;
+    private fadeOut_CS fade;
 
     private void Awake() 
     {
         livesSystem = GetComponent<livesSystem_CS>();
         hallPassSystem = GetComponent<hallPassSystem_CS>();
         playerMovement = GetComponent<playerMovement_CS>();
+        analyticsTracker = GetComponent<analyticsTracker_CS>();
+        animations = GetComponent<playerAnimations_CS>();
     }
 
     private void OnTriggerEnter (Collider other) 
@@ -30,8 +36,18 @@ public class detectPlayerCollisions_CS : MonoBehaviour
             
             //run related script to handle player lives
             livesSystem.subtractLives();
+            
+            //script accesses the object and runs the script associated with despawning it
+            Destroy(other.gameObject);
+            
+            //analytics
+            int stageNumber = sceneManager.GetStageNumber();
+            int levelNumber = sceneManager.GetLevelNumber();
+            Vector3 playerPosition =  this.transform.position;
+            analyticsTracker.OnPlayerHitsObstacle(other.name, stageNumber, levelNumber, playerPosition);
 
             //play animations involved
+            animations.PlayerGetsHit();
         }
 
         if (other.tag == passTag) 
@@ -40,7 +56,12 @@ public class detectPlayerCollisions_CS : MonoBehaviour
 
             //run related script to handle hall passes obtained
             hallPassSystem.AddHallPass();
-            Destroy(other.gameObject);
+
+            //script accesses the object and runs the script associated with despawning it
+            fade = other.gameObject.GetComponent<fadeOut_CS>();
+            fade.SetBool(true);
+
+            other.enabled = false;
 
             //call related UI and Particle Animations here
         }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1015907079319304530
+--- !u!1 &6030330903180599033
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1391629423285929004}
-  - component: {fileID: 2233403797545416015}
-  - component: {fileID: 3101978973328916953}
-  - component: {fileID: 2139906976632339834}
+  - component: {fileID: 6411958932005422147}
+  - component: {fileID: 8022038178407680998}
+  - component: {fileID: 5237957334315859756}
+  - component: {fileID: 8504254640108771770}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: Buffet_ENV
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1391629423285929004
+--- !u!4 &6411958932005422147
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1015907079319304530}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 15.229, y: 2.2879813, z: 1.9244146}
+  m_GameObject: {fileID: 6030330903180599033}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -0, y: 0.25, z: -0.18}
+  m_LocalScale: {x: 0.6619116, y: 0.6619116, z: 0.6619116}
   m_Children: []
   m_Father: {fileID: 7230372207718443785}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2233403797545416015
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!33 &8022038178407680998
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1015907079319304530}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &3101978973328916953
+  m_GameObject: {fileID: 6030330903180599033}
+  m_Mesh: {fileID: -3543969954944468416, guid: 2e8d80b8503ef7442a92f602c15d4463, type: 3}
+--- !u!23 &5237957334315859756
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1015907079319304530}
+  m_GameObject: {fileID: 6030330903180599033}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 55a20c30f88c33749bf5ecfeca3dcd05, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82,19 +82,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2139906976632339834
+--- !u!65 &8504254640108771770
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1015907079319304530}
+  m_GameObject: {fileID: 6030330903180599033}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 22.970026, y: 4.0026712, z: 2.3247912}
+  m_Center: {x: 0, y: 0.000000029802322, z: 0}
 --- !u!1 &8997928971171602589
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 7230372207718443785}
   m_Layer: 0
   m_Name: Buffet_ENV
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,7 +122,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.8196697, y: 2.3167, z: 2.2992}
   m_Children:
-  - {fileID: 1391629423285929004}
+  - {fileID: 6411958932005422147}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
