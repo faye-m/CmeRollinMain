@@ -8,12 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameProper/MainMenu.unity
     guid: 6bb17f9341b424c4187194e1545e5781
+  - enabled: 1
+    path: Assets/Scenes/GameProper/PauseMenu.unity
+    guid: 26d080e97fec7314090188b7092f865a
+  - enabled: 1
+    path: Assets/Scenes/GameProper/GameOverMenu.unity
+    guid: d36af53524fa0e44780eb7dba62b4f54
   - enabled: 0
-    path: Assets/Scenes/GameProper/TestGameSetup.unity
-    guid: 64a21e3773b1c474a94e2e5b35befd4a
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/GameProper/TestGameSetup.unity
-    guid: 64a21e3773b1c474a94e2e5b35befd4a
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/GameProper/Levels/stage1_level1.unity
     guid: 9e48bccf76398654e904fe2a3e3630d1
@@ -26,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameProper/Levels/stage1_level4.unity
     guid: 4856913fbfd0fa241856efca947542db
+  - enabled: 1
+    path: Assets/Scenes/GameProper/Levels/stage1_level5.unity
+    guid: bf725c2073bd8ab4dbad5ebe2e33ae95
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
@@ -35,6 +44,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameProper/Levels/stage2_level1.unity
     guid: 36d37f38e06f62348a823097ae543cea
+  - enabled: 1
+    path: Assets/Scenes/GameProper/Levels/stage2_level2.unity
+    guid: 34343031ede1a4047a97160e55a2bdcf
+  - enabled: 1
+    path: Assets/Scenes/GameProper/Levels/stage2_level3.unity
+    guid: 02348ef7a93be4b4ebe1ca35bafd5826
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

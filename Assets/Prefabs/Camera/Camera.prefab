@@ -26,8 +26,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5552209545883112605}
-  m_LocalRotation: {x: 0.12043497, y: -0, z: -0, w: 0.99272126}
-  m_LocalPosition: {x: 0, y: 2.72, z: -3.7}
+  m_LocalRotation: {x: 0.18872067, y: -0, z: -0, w: 0.9820308}
+  m_LocalPosition: {x: 0, y: 2.72, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5552209546682592165}
@@ -42,8 +42,8 @@ Camera:
   m_GameObject: {fileID: 5552209545883112605}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.69411767, g: 0.69411767, b: 0.6862745, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -57,7 +57,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 200
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -160,4 +160,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
-  speed: 5
+  speed: 10

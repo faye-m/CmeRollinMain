@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class mainGameplayUI_CS : MonoBehaviour
 {
-    [SerializeField] private GameObject inGameUISet = null, gameOverUISet = null, winUISet = null, loseUISet = null, progressTracker = null;//, pauseMenuUISet = null;
+    //[SerializeField] private GameObject inGameUISet = null, progressTracker = null;//, pauseMenuUISet = null;
     [SerializeField] private string playerTag = "Player";
 
     private livesSystem_CS livesSystem;
@@ -14,7 +14,7 @@ public class mainGameplayUI_CS : MonoBehaviour
     private bool gameIsPaused = false;
 
     private analyticsTracker_CS analyticsTracker;
-    private scenemanager_CS sceneManager;
+    [SerializeField]private scenemanager_CS sceneManager = null;
     private int stageNumber, levelNumber;
 
     [SerializeField] private Transform playerTransform = null, goalTransform = null;
@@ -34,7 +34,6 @@ public class mainGameplayUI_CS : MonoBehaviour
         hallPassSystem = GameObject.FindWithTag(playerTag).GetComponent<hallPassSystem_CS>();
         analyticsTracker = GameObject.FindWithTag(playerTag).GetComponent<analyticsTracker_CS>();
         totalDist = Vector3.Distance(playerTransform.position, goalTransform.position);
-        sceneManager = GetComponent<scenemanager_CS>();
 
         stageNumber = sceneManager.GetStageNumber();
         levelNumber = sceneManager.GetLevelNumber();
@@ -50,12 +49,12 @@ public class mainGameplayUI_CS : MonoBehaviour
     {
         DetectDistacetoGoal();
         GetPassCount();
+        DetectLevelOver();
     }
 
     private void LateUpdate() 
-    {
-        PauseGame();
-        DetectLevelOver();
+    {   
+        PauseGame();     
         DisplayDistancetoGoal();
         DisplayPassCount();
     }
@@ -68,7 +67,6 @@ public class mainGameplayUI_CS : MonoBehaviour
     private void GetPassCount() 
     {
         passCount = hallPassSystem.GetCurrentHallPassCount();
-        Debug.Log("Pass Count: " + passCount);
     }
 
     private void DisplayPassCount() 
@@ -90,7 +88,24 @@ public class mainGameplayUI_CS : MonoBehaviour
 
     private void DetectLevelOver() 
     {
-        if (levelIsOver && livesSystem.PlayerCaught() && !screenDisplayed) 
+        if (levelIsOver && livesSystem.PlayerCaught() && !screenDisplayed)
+        {
+            analyticsTracker.OnGameOver(stageNumber, levelNumber, distance, passCount);
+
+            string label = "Stage" + stageNumber + "Level" + levelNumber + "Passes";
+            int recordedCount = PlayerPrefs.GetInt(label);
+            if (passCount > recordedCount) PlayerPrefs.SetInt(label, passCount);
+
+            sceneManager.GameIsOver(true, true);
+        }
+
+        else if (levelIsOver && !livesSystem.PlayerCaught() && !screenDisplayed) 
+        {
+            analyticsTracker.OnGameClear(stageNumber, levelNumber, passCount);
+            sceneManager.GameIsOver(false, true);
+        }
+
+        /*if (levelIsOver && livesSystem.PlayerCaught() && !screenDisplayed) 
         {
             analyticsTracker.OnGameOver(stageNumber, levelNumber, distance, passCount);
 
@@ -126,10 +141,10 @@ public class mainGameplayUI_CS : MonoBehaviour
             winUISet.SetActive(false);
             progressTracker.SetActive(true);
             screenDisplayed = false;
-        }
+        }*/
 
-        if (levelIsOver) Time.timeScale = 0;
-        else if (!levelIsOver && !gameIsPaused && !gameBegins) Time.timeScale = 1;
+        /*if (levelIsOver) Time.timeScale = 0;
+        else */if (!levelIsOver && !gameIsPaused && !gameBegins) Time.timeScale = 1;
     }
 
     public void PauseButton() 

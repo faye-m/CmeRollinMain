@@ -232,6 +232,7 @@ GameObject:
   - component: {fileID: 7948209581148761355}
   - component: {fileID: 7040846949190411774}
   - component: {fileID: 4193079483006449650}
+  - component: {fileID: 3012352430143140962}
   m_Layer: 5
   m_Name: schoolStageButton
   m_TagString: Untagged
@@ -368,6 +369,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageNumber: 1
   levelNumber: 1
+--- !u!114 &3012352430143140962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9204098338451028024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf64685f414a9c49a70023c2290771f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  duration: 0.25
+  inType: 32
+  outType: 0
+  scaleIn: {x: 1, y: 1, z: 1}
+  scaleOut: {x: 0, y: 0, z: 0}
 --- !u!1001 &16460446995001323
 PrefabInstance:
   m_ObjectHideFlags: 0

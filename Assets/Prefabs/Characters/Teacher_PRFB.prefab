@@ -45,7 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
-  npcGO: {fileID: 8958416477620748304}
 --- !u!1001 &2434353662301012604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -160,11 +159,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91752d961be8b84478e0f43aa291039d, type: 3}
---- !u!1 &8958416477620748304 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2856199017513536737, guid: 91752d961be8b84478e0f43aa291039d, type: 3}
-  m_PrefabInstance: {fileID: 6625342115740224753}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8581997208971713194 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3235996256380032603, guid: 91752d961be8b84478e0f43aa291039d, type: 3}

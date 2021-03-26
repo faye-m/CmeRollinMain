@@ -41,16 +41,16 @@ public class followPlayer_CS : MonoBehaviour
         switch (lives) 
         {
             case 3:
-                delta = 0.015f;
-                break;
-            case 2:
-                delta = 0.02f;
-                break;
-            case 1:
                 delta = 0.025f;
                 break;
+            case 2:
+                delta = 0.030f;
+                break;
+            case 1:
+                delta = 0.035f;
+                break;
             default:
-                delta = 0.03f;
+                delta = 0.04f;
                 break;
         }
 

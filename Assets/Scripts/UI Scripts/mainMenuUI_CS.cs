@@ -13,6 +13,7 @@ public class mainMenuUI_CS : MonoBehaviour
 
     private void Start() 
     {
+        Time.timeScale = 1;
         int condition = PlayerPrefs.GetInt("LevelSelect");
 
         if (condition == 1) isOnLevelSelect = true;

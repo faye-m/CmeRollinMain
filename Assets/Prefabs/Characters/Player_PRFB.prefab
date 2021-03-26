@@ -84,7 +84,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minX: -5.5
   maxX: 5.5
-  slideSpeed: 10
+  slideSpeed: 20
   rollingSpeed: 10
 --- !u!114 &55494724553457486
 MonoBehaviour:
@@ -178,9 +178,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 55494724553457480}
     m_Modifications:
+    - target: {fileID: 16177694348743386, guid: b4b0aeddd9854634f97d91f830f6a011, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 35727520734349428, guid: b4b0aeddd9854634f97d91f830f6a011, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800512940929647152, guid: b4b0aeddd9854634f97d91f830f6a011, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2738777964401303451, guid: b4b0aeddd9854634f97d91f830f6a011, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4347235776925906391, guid: b4b0aeddd9854634f97d91f830f6a011, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4802715949669637141, guid: b4b0aeddd9854634f97d91f830f6a011, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6234047417658067979, guid: b4b0aeddd9854634f97d91f830f6a011, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6943438505962782359, guid: b4b0aeddd9854634f97d91f830f6a011, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7654340290825093646, guid: b4b0aeddd9854634f97d91f830f6a011, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8502298047806259930, guid: b4b0aeddd9854634f97d91f830f6a011, type: 3}
       propertyPath: m_Name

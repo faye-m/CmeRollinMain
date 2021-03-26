@@ -52,35 +52,27 @@ public class playerMovement_CS : MonoBehaviour
     {
         if (Input.GetButtonDown("Left Click") || Input.GetAxis("Mouse X") !=0) usingKeys = false;
 
-        if (!isOnEdgeOfMap) 
+        
+        if (Input.GetAxis("Horizontal") != 0) 
         {
-            if (Input.GetAxis("Horizontal") != 0) 
-            {
-                usingKeys = true;
-                KeyboardControls();
-            }
+            usingKeys = true;
+            KeyboardControls();
+        }
 
-            else if (Input.touchCount > 0) 
-            {
-                usingKeys = false;
-                MobileControls();
-            }
+        else if (Input.mousePresent && !usingKeys) 
+        {
+            MouseControls();
+        }
 
-            else if (Input.mousePresent && !usingKeys) 
-            {
-                MouseControls();
-            }
-
-            else 
-            {
-                playerRB.velocity = Vector3.forward * rollingSpeed; //  * Time.deltaTime;
-                animations.GoingForward();
-            }
+        else if (Input.touchCount > 0) 
+        {
+            usingKeys = false;
+            MobileControls();
         }
 
         else 
         {
-            playerRB.velocity = Vector3.forward * rollingSpeed;
+            playerRB.velocity = Vector3.forward * rollingSpeed; //  * Time.deltaTime;
             animations.GoingForward();
         }
     }
