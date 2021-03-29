@@ -21,8 +21,8 @@ public class mainGameplayUI_CS : MonoBehaviour
     [SerializeField] private Slider progressSlider = null;
     private float distance, totalDist;
 
-    private int passCount = 0;
-    [SerializeField] private GameObject[] hallPassImages = null;
+    private int passCount = 0, lifeCount;
+    [SerializeField] private GameObject[] hallPassImages = null, lifeImages = null;
 
     private bool screenDisplayed = true;
     private bool gameBegins = true;
@@ -49,6 +49,7 @@ public class mainGameplayUI_CS : MonoBehaviour
     {
         DetectDistacetoGoal();
         GetPassCount();
+        GetLifeCount();
         DetectLevelOver();
     }
 
@@ -57,11 +58,25 @@ public class mainGameplayUI_CS : MonoBehaviour
         PauseGame();     
         DisplayDistancetoGoal();
         DisplayPassCount();
+        DisplayLifeCount();
     }
 
     public void SetBool(bool condition) 
     {
         levelIsOver = condition;
+    }
+
+    private void GetLifeCount() 
+    {
+        lifeCount = livesSystem.GetCurrentLives();
+        Debug.Log("Lives: " + lifeCount);
+    }
+
+    private void DisplayLifeCount() 
+    {
+        if (lifeCount == 2 && lifeImages[2].activeSelf) lifeImages[2].SetActive(false);
+        else if (lifeCount == 1 && lifeImages[1].activeSelf) lifeImages[1].SetActive(false);
+        else if (lifeCount == 0 && lifeImages[0].activeSelf) lifeImages[0].SetActive(false);
     }
 
     private void GetPassCount() 
@@ -88,20 +103,22 @@ public class mainGameplayUI_CS : MonoBehaviour
 
     private void DetectLevelOver() 
     {
-        if (levelIsOver && livesSystem.PlayerCaught() && !screenDisplayed)
+        if (levelIsOver && livesSystem.PlayerCaught())
         {
             analyticsTracker.OnGameOver(stageNumber, levelNumber, distance, passCount);
-
-            string label = "Stage" + stageNumber + "Level" + levelNumber + "Passes";
-            int recordedCount = PlayerPrefs.GetInt(label);
-            if (passCount > recordedCount) PlayerPrefs.SetInt(label, passCount);
-
             sceneManager.GameIsOver(true, true);
         }
 
-        else if (levelIsOver && !livesSystem.PlayerCaught() && !screenDisplayed) 
+        else if (levelIsOver && !livesSystem.PlayerCaught()) 
         {
             analyticsTracker.OnGameClear(stageNumber, levelNumber, passCount);
+
+            string label = "Stage" + stageNumber + "Level" + levelNumber + "Passes";
+            string recordedLabel = "Stage" + stageNumber + "Level" + levelNumber + "PassesRecord";
+            int recordedCount = PlayerPrefs.GetInt(recordedLabel);
+            if (passCount > recordedCount) PlayerPrefs.SetInt(recordedLabel, passCount);
+            PlayerPrefs.SetInt(label, passCount);
+
             sceneManager.GameIsOver(false, true);
         }
 

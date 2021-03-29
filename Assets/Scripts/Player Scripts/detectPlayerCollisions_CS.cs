@@ -32,8 +32,6 @@ public class detectPlayerCollisions_CS : MonoBehaviour
     {
         if (other.tag == obstacleTag) 
         {
-            Debug.Log("Player loses one life or enters Game Over when the lives reach 0");
-            
             //run related script to handle player lives
             livesSystem.subtractLives();
             
@@ -52,8 +50,6 @@ public class detectPlayerCollisions_CS : MonoBehaviour
 
         if (other.tag == passTag) 
         {
-            Debug.Log("Player obtains a hall pass");
-
             //run related script to handle hall passes obtained
             hallPassSystem.AddHallPass();
 

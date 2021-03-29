@@ -37,7 +37,6 @@ public class livesSystem_CS : MonoBehaviour
             //pause game or go to the win/lose screen
         }
 
-        Debug.Log("Current Lives: " + currentLives);
     }
 
     public bool PlayerCaught() 

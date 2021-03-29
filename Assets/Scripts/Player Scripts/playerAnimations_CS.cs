@@ -15,7 +15,6 @@ public class playerAnimations_CS : MonoBehaviour
         if (isDizzy) 
         {
             currentTime += Time.fixedDeltaTime;
-            Debug.Log("Time Player is Dizzy - " + currentTime);
             if (currentTime >= dizzyTime) 
             {
                 dizzyPFX.SetActive(false);
@@ -57,12 +56,6 @@ public class playerAnimations_CS : MonoBehaviour
         playerAnim.SetBool("LeaningRight", false);
         playerAnim.SetBool("LeaningLeft", false);
         playerAnim.SetBool("GoingForward", true);
-        Debug.Log("Forward Motion is Playing");
-    }
-
-    public void PlayerLoses() 
-    {
-        playerAnim.Play("Base Layer.DejectedAnim");
     }
 
 

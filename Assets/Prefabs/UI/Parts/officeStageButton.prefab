@@ -233,6 +233,7 @@ GameObject:
   - component: {fileID: 7040846949190411774}
   - component: {fileID: 5676586033020220250}
   - component: {fileID: 6965189156325320407}
+  - component: {fileID: 6978464818135490790}
   m_Layer: 5
   m_Name: officeStageButton
   m_TagString: Untagged
@@ -387,6 +388,23 @@ MonoBehaviour:
   outType: 0
   scaleIn: {x: 1, y: 1, z: 1}
   scaleOut: {x: 0, y: 0, z: 0}
+--- !u!114 &6978464818135490790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9204098338451028024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e52be23e43a75f44b94e3edf2820001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneManager: {fileID: 5676586033020220250}
+  hallPassImages:
+  - {fileID: 6126867894861938608}
+  - {fileID: 6537113731200887486}
+  - {fileID: 2322253111140738749}
 --- !u!1001 &16460446995001323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -498,6 +516,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6521780698741048661, guid: b8255458549ead84d96a2b4597c216a9, type: 3}
+      propertyPath: m_Name
+      value: FillImage2
+      objectReference: {fileID: 0}
     - target: {fileID: 7952883995335363161, guid: b8255458549ead84d96a2b4597c216a9, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 1.2
@@ -507,6 +529,11 @@ PrefabInstance:
 --- !u!224 &6537113731256315890 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6521780698685587481, guid: b8255458549ead84d96a2b4597c216a9, type: 3}
+  m_PrefabInstance: {fileID: 16460446995001323}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6537113731200887486 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6521780698741048661, guid: b8255458549ead84d96a2b4597c216a9, type: 3}
   m_PrefabInstance: {fileID: 16460446995001323}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1118305710246476517
@@ -624,6 +651,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6521780698741048661, guid: b8255458549ead84d96a2b4597c216a9, type: 3}
+      propertyPath: m_Name
+      value: FillImage1
+      objectReference: {fileID: 0}
     - target: {fileID: 7952883995335363161, guid: b8255458549ead84d96a2b4597c216a9, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 1.2
@@ -633,6 +664,11 @@ PrefabInstance:
 --- !u!224 &6126867894840031996 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6521780698685587481, guid: b8255458549ead84d96a2b4597c216a9, type: 3}
+  m_PrefabInstance: {fileID: 1118305710246476517}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6126867894861938608 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6521780698741048661, guid: b8255458549ead84d96a2b4597c216a9, type: 3}
   m_PrefabInstance: {fileID: 1118305710246476517}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8842897150273872872
@@ -746,6 +782,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6521780698741048661, guid: b8255458549ead84d96a2b4597c216a9, type: 3}
+      propertyPath: m_Name
+      value: FillImage3
+      objectReference: {fileID: 0}
     - target: {fileID: 7952883995335363161, guid: b8255458549ead84d96a2b4597c216a9, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 1.2
@@ -755,5 +795,10 @@ PrefabInstance:
 --- !u!224 &2322253111194035185 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6521780698685587481, guid: b8255458549ead84d96a2b4597c216a9, type: 3}
+  m_PrefabInstance: {fileID: 8842897150273872872}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2322253111140738749 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6521780698741048661, guid: b8255458549ead84d96a2b4597c216a9, type: 3}
   m_PrefabInstance: {fileID: 8842897150273872872}
   m_PrefabAsset: {fileID: 0}

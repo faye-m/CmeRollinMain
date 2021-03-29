@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7090808050747546715}
-  - component: {fileID: 8458627865335347363}
   m_Layer: 0
   m_Name: Couch_Prefab01
   m_TagString: Untagged
@@ -32,19 +31,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &8458627865335347363
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3052850920150097637}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.2000008, y: 0.785, z: 0.9}
-  m_Center: {x: -0.00000029802322, y: 0.49031845, z: 0}
 --- !u!1 &5728689133879147876
 GameObject:
   m_ObjectHideFlags: 0
