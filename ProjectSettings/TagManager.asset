@@ -8,6 +8,7 @@ TagManager:
   - hallPass
   - goal
   - customItem
+  - uiAudio
   layers:
   - Default
   - TransparentFX

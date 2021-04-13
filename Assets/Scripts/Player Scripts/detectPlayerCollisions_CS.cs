@@ -18,6 +18,7 @@ public class detectPlayerCollisions_CS : MonoBehaviour
     [SerializeField] private scenemanager_CS sceneManager = null;
     private playerAnimations_CS animations;
     private fadeOut_CS fade;
+    private hatAnimation_CS hatAnimation;
 
     private void Awake() 
     {
@@ -35,9 +36,6 @@ public class detectPlayerCollisions_CS : MonoBehaviour
             //run related script to handle player lives
             livesSystem.subtractLives();
             
-            //script accesses the object and runs the script associated with despawning it
-            Destroy(other.gameObject);
-            
             //analytics
             int stageNumber = sceneManager.GetStageNumber();
             int levelNumber = sceneManager.GetLevelNumber();
@@ -46,6 +44,9 @@ public class detectPlayerCollisions_CS : MonoBehaviour
 
             //play animations involved
             animations.PlayerGetsHit();
+
+            //script accesses the object and runs the script associated with despawning it
+            Destroy(other.gameObject);
         }
 
         if (other.tag == passTag) 
@@ -64,7 +65,6 @@ public class detectPlayerCollisions_CS : MonoBehaviour
 
         if (other.tag == finishLineTag) 
         {
-            Debug.Log("Player wins the level, CONGRATS!");
 
             //tells the game that the level is finished
             mainGameplayUI.SetBool(true);
@@ -76,7 +76,15 @@ public class detectPlayerCollisions_CS : MonoBehaviour
         {
             // call related UI and Particle Animations here
             Debug.Log("You've obtained a HAT! Got to the customize menu to see how it looks on you.");
-            Destroy(other.gameObject);
+            
+            hatAnimation = other.gameObject.GetComponent<hatAnimation_CS>();
+            hatAnimation.AddHat();
+            //script accesses the object and runs the script associated with despawning it
+            fade = other.gameObject.GetComponent<fadeOut_CS>();
+            fade.SetBool(true);
+            fade.SetPromptActive();
+
+            
         }
     }
 }

@@ -8,21 +8,23 @@ public class livesSystem_CS : MonoBehaviour
     [SerializeField] private int currentLives;
     private int deathValue = 0;
     private bool playerIsCaught = false;
-    
-    [SerializeField] private GameObject mainGameplayUIGO = null;
-    private mainGameplayUI_CS mainGameplayUI;
 
+    [SerializeField] private mainGameplayUI_CS mainGameplayUI = null;
+
+    private void Awake() 
+    {
+        SetLives();
+    }
     private void Start() 
     {
-        mainGameplayUI = mainGameplayUIGO.GetComponent<mainGameplayUI_CS>();
-        SetLives();
+
     }
 
     private void SetLives() 
     {
         currentLives = maxLives;
         playerIsCaught = false;
-        mainGameplayUI.SetBool(playerIsCaught);
+        mainGameplayUI.SetBool(false);
     }
 
     public void subtractLives() 

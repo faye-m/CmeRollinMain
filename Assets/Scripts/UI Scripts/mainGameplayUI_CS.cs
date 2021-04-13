@@ -24,7 +24,6 @@ public class mainGameplayUI_CS : MonoBehaviour
     private int passCount = 0, lifeCount;
     [SerializeField] private GameObject[] hallPassImages = null, lifeImages = null;
 
-    private bool screenDisplayed = true;
     private bool gameBegins = true;
 
 
@@ -51,6 +50,7 @@ public class mainGameplayUI_CS : MonoBehaviour
         GetPassCount();
         GetLifeCount();
         DetectLevelOver();
+        DisplayLifeCount();
     }
 
     private void LateUpdate() 
@@ -58,7 +58,6 @@ public class mainGameplayUI_CS : MonoBehaviour
         PauseGame();     
         DisplayDistancetoGoal();
         DisplayPassCount();
-        DisplayLifeCount();
     }
 
     public void SetBool(bool condition) 
@@ -69,14 +68,41 @@ public class mainGameplayUI_CS : MonoBehaviour
     private void GetLifeCount() 
     {
         lifeCount = livesSystem.GetCurrentLives();
-        Debug.Log("Lives: " + lifeCount);
     }
 
     private void DisplayLifeCount() 
     {
-        if (lifeCount == 2 && lifeImages[2].activeSelf) lifeImages[2].SetActive(false);
-        else if (lifeCount == 1 && lifeImages[1].activeSelf) lifeImages[1].SetActive(false);
-        else if (lifeCount == 0 && lifeImages[0].activeSelf) lifeImages[0].SetActive(false);
+        if (gameBegins) 
+        {
+            for (int i = lifeImages.Length - 1; i >= 0; i --) 
+            {
+                if (!lifeImages[i].activeSelf) lifeImages[i].SetActive(true);
+            }
+        }
+
+        else 
+        {
+            switch (lifeCount) 
+            {
+                case 2:
+                    if (lifeImages[2].activeSelf) lifeImages[2].SetActive(false);
+                    break;
+                case 1:
+                    if (lifeImages[1].activeSelf) lifeImages[1].SetActive(false);
+                    break;
+                case 0:
+                    if (lifeImages[0].activeSelf) lifeImages[0].SetActive(false);
+                    break;
+                default:
+                    break;
+            }
+            
+            /*if (lifeCount == 2 && lifeImages[2].activeSelf) lifeImages[2].SetActive(false);
+            else if (lifeCount == 1 && lifeImages[1].activeSelf) lifeImages[1].SetActive(false);
+            else if (lifeCount == 0 && lifeImages[0].activeSelf) lifeImages[0].SetActive(false);*/
+        }
+
+        Debug.Log("Lives: " + lifeCount);
     }
 
     private void GetPassCount() 
@@ -116,8 +142,23 @@ public class mainGameplayUI_CS : MonoBehaviour
             string label = "Stage" + stageNumber + "Level" + levelNumber + "Passes";
             string recordedLabel = "Stage" + stageNumber + "Level" + levelNumber + "PassesRecord";
             int recordedCount = PlayerPrefs.GetInt(recordedLabel);
-            if (passCount > recordedCount) PlayerPrefs.SetInt(recordedLabel, passCount);
+            if (passCount > recordedCount) 
+            {
+                //record the pass count for this particular level
+                PlayerPrefs.SetInt(recordedLabel, passCount);
+
+                //set the total amount of unlocked passes for this stage
+                string stageTotalLabel = "Stage" + stageNumber + "TotalPassCount";
+                int totalStagePassCount = PlayerPrefs.GetInt(stageTotalLabel);
+                totalStagePassCount += (passCount - recordedCount);
+                PlayerPrefs.SetInt(stageTotalLabel, totalStagePassCount);
+            }
             PlayerPrefs.SetInt(label, passCount);
+            
+            string unlockLabel; 
+            if (levelNumber < 10) unlockLabel = "Stage" + stageNumber.ToString() + "Level" + (levelNumber+1).ToString() + "Unlocked";
+            else unlockLabel = "Stage" + (stageNumber+1).ToString() + "Level" + (1).ToString() + "Unlocked";
+            PlayerPrefs.SetInt (unlockLabel, 1);
 
             sceneManager.GameIsOver(false, true);
         }

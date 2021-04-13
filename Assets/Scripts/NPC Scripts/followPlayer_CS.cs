@@ -5,10 +5,12 @@ using UnityEngine;
 public class followPlayer_CS : MonoBehaviour
 {
     private Transform playerTransform;
+    //[SerializeField] private Transform npcTransform = null;
     [SerializeField] private string playerTag = "Player";
     private Vector3 currentPosition;
     private Vector3 targetPosition;
     private livesSystem_CS livesSystem;
+    private int lives;
 
     // Start is called before the first frame update
     private void Awake() 
@@ -19,6 +21,8 @@ public class followPlayer_CS : MonoBehaviour
 
     private void Start() 
     {
+        lives = livesSystem.GetCurrentLives();
+        currentPosition = this.gameObject.transform.localPosition;
     }
 
     // Update is called once per frame
@@ -28,6 +32,25 @@ public class followPlayer_CS : MonoBehaviour
         NPCMovement();
     }
 
+/*    private void SetNPCPosition() 
+    {
+        switch (lives) 
+        {
+            case 3:
+                
+                break;
+            case 2:
+                
+                break;
+            case 1:
+                
+                break;
+            default:
+                
+                break;
+        }        
+    }*/
+
     private void NPCMovement() 
     {
         playerTransform = GameObject.FindWithTag(playerTag).transform;
@@ -36,21 +59,21 @@ public class followPlayer_CS : MonoBehaviour
         currentPosition = this.transform.position;
 
         int lives = livesSystem.GetCurrentLives();
-        float delta;
+        float delta = 0.04f;
 
         switch (lives) 
         {
             case 3:
-                delta = 0.025f;
+                targetPosition.z -= 0.20f;
                 break;
             case 2:
-                delta = 0.030f;
+                targetPosition.z -= 0.10f;
                 break;
             case 1:
-                delta = 0.035f;
+                targetPosition.z -= 0f;
                 break;
             default:
-                delta = 0.04f;
+                targetPosition.z -= 0f;
                 break;
         }
 

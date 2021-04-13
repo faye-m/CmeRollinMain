@@ -111,7 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeSpeedMultiplier: 3
   parent: {fileID: 5967065117893569889}
-  collider: {fileID: 8358340057754701976}
+  objCollider: {fileID: 8358340057754701976}
 --- !u!1 &5967065117893569889
 GameObject:
   m_ObjectHideFlags: 0

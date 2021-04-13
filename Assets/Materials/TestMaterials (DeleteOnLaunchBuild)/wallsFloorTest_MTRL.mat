@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: wallsFloorTest_MTRL
-  m_Shader: {fileID: -6465566751694194690, guid: da3efdb1290a82c4bb8303fb7fc5dce4, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: cf830233fc8901d4f9271352d796e9d7, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -68,11 +68,15 @@ Material:
     - _Cutoff: 0.5
     - _DstBlend: 0
     - _EnvironmentReflections: 1
+    - _Fade: 2
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
+    - _NoiseScale: 50
     - _OcclusionStrength: 1
+    - _OutlineThickness: 0.1
+    - _OverlayOpacity: 1
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
@@ -86,6 +90,7 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 1, g: 0.6331553, b: 0.259434, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _Tint: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 0.3607843}
   m_BuildTextureStacks: []

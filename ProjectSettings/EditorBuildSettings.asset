@@ -35,12 +35,30 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameProper/Levels/stage1_level5.unity
     guid: bf725c2073bd8ab4dbad5ebe2e33ae95
+  - enabled: 1
+    path: Assets/Scenes/GameProper/Levels/stage1_level6.unity
+    guid: b311623ea4d09a04dbf55714937f67b1
+  - enabled: 1
+    path: Assets/Scenes/GameProper/Levels/stage1_level7.unity
+    guid: 68243c4b23fd7ab468cb192031592994
+  - enabled: 1
+    path: Assets/Scenes/GameProper/Levels/stage1_level8.unity
+    guid: 4a8afb97498643e429e5c80334843762
+  - enabled: 1
+    path: Assets/Scenes/GameProper/Levels/stage1_level9.unity
+    guid: ad3d5d75aae5eb342adb9536c0198501
+  - enabled: 1
+    path: Assets/Scenes/GameProper/Levels/stage1_level10.unity
+    guid: a17e2bb6e135e8348a823f161d20578b
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/GameProper/Levels/stage2_level10.unity
+    guid: 0c45e0fb5340a52479b687dc896e9654
   - enabled: 1
     path: Assets/Scenes/GameProper/Levels/stage2_level1.unity
     guid: 36d37f38e06f62348a823097ae543cea
@@ -50,6 +68,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameProper/Levels/stage2_level3.unity
     guid: 02348ef7a93be4b4ebe1ca35bafd5826
+  - enabled: 1
+    path: Assets/Scenes/GameProper/Levels/stage2_level4.unity
+    guid: a8bdb95e0f3065949afc70ed8405012c
+  - enabled: 1
+    path: Assets/Scenes/GameProper/Levels/stage2_level5.unity
+    guid: 4420e948504021341afdc1b647dcd8ca
+  - enabled: 1
+    path: Assets/Scenes/GameProper/Levels/stage2_level6.unity
+    guid: a8053e634c61fd34bafa49a4fd689841
+  - enabled: 1
+    path: Assets/Scenes/GameProper/Levels/stage2_level7.unity
+    guid: da4331c74694850448e6a3f2a70c12bb
+  - enabled: 1
+    path: Assets/Scenes/GameProper/Levels/stage2_level8.unity
+    guid: 58b486899c367be458031b0d909f0f2e
+  - enabled: 1
+    path: Assets/Scenes/GameProper/Levels/stage2_level9.unity
+    guid: 98befb0b04e59d842aff646aacda73a4
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class fadeOut_CS : MonoBehaviour
 {
-    private Material material;
+    [SerializeField] private Material material = null;
     private bool isFading = false;
     private float fade;
     [SerializeField] private float fadeSpeedMultiplier = 2f;
-    [SerializeField] private GameObject parent;
-    [SerializeField] private Collider collider = null;
+    [SerializeField] private GameObject parent = null;
+    [SerializeField] private Collider objCollider = null;
+    [SerializeField] private GameObject obtainItemPrompt = null;
+    [SerializeField] private hatAnimation_CS hatAnim = null;
+    [SerializeField] private float displayTime = 5f;
+    private float currentTime = 0f;
 
     private void Awake() 
     {
-        material = GetComponent<SpriteRenderer>().material;
+        if (material == null) material = GetComponent<SpriteRenderer>().material;
         fade = material.GetFloat("_Fade");
     }
 
@@ -28,21 +32,30 @@ public class fadeOut_CS : MonoBehaviour
     {
         if (isFading) 
         {
-            collider.enabled = false;
+            currentTime += Time.deltaTime;
+            objCollider.enabled = false;
             fade -= Time.deltaTime * fadeSpeedMultiplier;
             if (fade <= 0f) 
             {
-                isFading = false;
+                //isFading = false;
+                fade = 1.5f;
                 material.SetFloat("_Fade", fade);
                 Destroy(parent);
             }
 
             material.SetFloat("_Fade", fade);
         }
+
+        if (obtainItemPrompt != null && obtainItemPrompt.activeSelf && currentTime >= displayTime) obtainItemPrompt.SetActive(false);
     }
 
     public void SetBool(bool condition) 
     {
         isFading = condition;
+    }
+
+    public void SetPromptActive() 
+    {
+        if (obtainItemPrompt != null) obtainItemPrompt.SetActive(true);       
     }
 }

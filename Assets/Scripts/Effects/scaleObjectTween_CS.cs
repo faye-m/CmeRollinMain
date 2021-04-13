@@ -7,8 +7,7 @@ public class scaleObjectTween_CS : MonoBehaviour
 {
     [SerializeField] private float delay = 0f;
     [SerializeField] private float duration = 0.25f;
-    [SerializeField] private LeanTweenType inType;
-    [SerializeField] private LeanTweenType outType;
+    public LeanTweenType inType, outType;
     [SerializeField] private Vector3 scaleIn = new Vector3( 1f, 1f, 1f);
     [SerializeField] private Vector3 scaleOut = new Vector3( 0f, 0f, 0f);
 

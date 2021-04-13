@@ -9,11 +9,20 @@ public class scenemanager_CS : MonoBehaviour
     private string levelName;
     [SerializeField] private int stageNumber = 0; 
     [SerializeField] private int levelNumber = 0;
-    private int levelCount = 12;
+    private int levelCountStage1 = 9, levelCountStage2 = 10;
     private string mainMenuSceneName = "MainMenu";
 
     private bool gameIsOver = false;
     private bool playerWasCaught = false;
+
+    [SerializeField] private Text stageText = null;
+    private string stageLabel;
+
+    private void Start() 
+    {
+        stageLabel = "STAGE " + stageNumber.ToString() + " LVL " + levelNumber.ToString();
+        if (stageText != null) stageText.text = stageLabel;
+    }
 
     private void Update() 
     {
@@ -77,13 +86,25 @@ public class scenemanager_CS : MonoBehaviour
         levelNumber = PlayerPrefs.GetInt("LevelNumber"); 
         stageNumber = PlayerPrefs.GetInt("StageNumber");
 
-        if (levelCount != levelNumber) 
+        // go to next level in stage 1
+        if (levelCountStage1 > levelNumber && stageNumber == 1 && levelCountStage1 != levelNumber) 
         {
             levelName = "stage" + stageNumber.ToString() + "_level" + (levelNumber + 1).ToString();
 
             PlayerPrefs.SetInt("StageNumber", stageNumber);
             PlayerPrefs.SetInt("LevelNumber", (levelNumber + 1));
         }
+        // go to next level in stage 2
+        else if (levelCountStage2 > levelNumber && stageNumber == 2 && levelCountStage2 != levelNumber) 
+        {
+            levelName = "stage" + stageNumber.ToString() + "_level" + (levelNumber + 1).ToString();
+
+            PlayerPrefs.SetInt("StageNumber", stageNumber);
+            PlayerPrefs.SetInt("LevelNumber", (levelNumber + 1));
+        }
+        // go to main menu if levels are finished
+        else if (stageNumber == 2) levelName = mainMenuSceneName;
+
         else 
         {
             levelName = "stage" + (stageNumber + 1).ToString() + "_level" + (1).ToString();
@@ -134,6 +155,5 @@ public class scenemanager_CS : MonoBehaviour
         }
 
         SceneManager.LoadScene("GameOverMenu");
-        Debug.Log("Load the Game Over Menu");
     }
 }

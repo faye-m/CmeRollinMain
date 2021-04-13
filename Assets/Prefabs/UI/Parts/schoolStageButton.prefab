@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1311114771596768736
 RectTransform:
   m_ObjectHideFlags: 0
@@ -234,6 +234,7 @@ GameObject:
   - component: {fileID: 4193079483006449650}
   - component: {fileID: 3012352430143140962}
   - component: {fileID: 339013436755948535}
+  - component: {fileID: 3168127685263370716}
   m_Layer: 5
   m_Name: schoolStageButton
   m_TagString: Untagged
@@ -284,7 +285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -339,7 +340,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 7948209581148761355}
   m_OnClick:
     m_PersistentCalls:
@@ -370,6 +371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageNumber: 1
   levelNumber: 1
+  stageText: {fileID: 0}
 --- !u!114 &3012352430143140962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,6 +407,22 @@ MonoBehaviour:
   - {fileID: 6126867894861938608}
   - {fileID: 6537113731200887486}
   - {fileID: 2322253111140738749}
+--- !u!114 &3168127685263370716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9204098338451028024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae328f106d9c15347af32f6d3ad12a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneManager: {fileID: 4193079483006449650}
+  padlock: {fileID: 7196232650024516944}
+  buttonImage: {fileID: 7948209581148761355}
+  levelButton: {fileID: 7040846949190411774}
 --- !u!1001 &16460446995001323
 PrefabInstance:
   m_ObjectHideFlags: 0

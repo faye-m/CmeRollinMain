@@ -39,6 +39,5 @@ public class hallPassSystem_CS : MonoBehaviour
     public void AddHallPass() 
     {
         currentHallPassCount ++;
-        Debug.Log("Current Hall Pass #: " + currentHallPassCount);
     }
 }

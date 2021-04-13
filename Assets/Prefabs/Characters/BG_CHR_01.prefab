@@ -81,7 +81,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 072cdf170f540fa4fa56b3f837a7e28b, type: 3}
+  - {fileID: 2100000, guid: c3cfe02a8d608ab44b8fac1a28a6b201, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2301,6 +2301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8474270255696047818}
   - component: {fileID: 2556508788103722160}
+  - component: {fileID: 8274245605812166509}
   m_Layer: 0
   m_Name: BG_CHR_01
   m_TagString: Untagged
@@ -2343,3 +2344,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8274245605812166509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9138216281774470256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17aa51e092f63b94e979273647570929, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcAnim: {fileID: 8219102971646916088}

@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1311114771596768736
 RectTransform:
   m_ObjectHideFlags: 0
@@ -234,6 +234,7 @@ GameObject:
   - component: {fileID: 5676586033020220250}
   - component: {fileID: 6965189156325320407}
   - component: {fileID: 6978464818135490790}
+  - component: {fileID: 2187720132685931773}
   m_Layer: 5
   m_Name: officeStageButton
   m_TagString: Untagged
@@ -370,6 +371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageNumber: 2
   levelNumber: 1
+  stageText: {fileID: 0}
 --- !u!114 &6965189156325320407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,6 +407,22 @@ MonoBehaviour:
   - {fileID: 6126867894861938608}
   - {fileID: 6537113731200887486}
   - {fileID: 2322253111140738749}
+--- !u!114 &2187720132685931773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9204098338451028024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae328f106d9c15347af32f6d3ad12a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneManager: {fileID: 5676586033020220250}
+  padlock: {fileID: 7196232650024516944}
+  buttonImage: {fileID: 7948209581148761355}
+  levelButton: {fileID: 7040846949190411774}
 --- !u!1001 &16460446995001323
 PrefabInstance:
   m_ObjectHideFlags: 0

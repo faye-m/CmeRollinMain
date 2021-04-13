@@ -24,7 +24,7 @@ public class playerMovement_CS : MonoBehaviour
     private float distance;
 
     private bool usingKeys = true;
-    private bool isOnEdgeOfMap = false;
+    //private bool isOnEdgeOfMap = false;
 
     private playerAnimations_CS animations;
 
@@ -84,8 +84,8 @@ public class playerMovement_CS : MonoBehaviour
         //transform.position = Vector3.MoveTowards(curPos, tarPos, delta);
         //playerRB.velocity = transform.forward * rollingSpeed;
 
-        if (curPos.x >= maxX && tarPos.x >= maxX) tarPos.x = maxX;
-        else if  (curPos.x <= minX && tarPos.x <= minX) tarPos.x = minX;
+        if (tarPos.x >= maxX) tarPos.x = maxX;
+        else if  (tarPos.x <= minX) tarPos.x = minX;
 
         CallAnimations(tarPos.x, curPos.x);
 
